@@ -1,8 +1,9 @@
-import FilterCard from "@/components/FilterCard";
-import GameCard from "@/components/GameCard";
-import Search from "@/components/Search";
+import FilterCard from "@/components/Filters/FilterCard";
+import GameCard from "@/components/GameCard/GameCard";
+import NoGameFoundCard from "@/components/GameCard/NoGameFoundCard";
+import Search from "@/components/SearchBar/Search";
+import TitleH1 from "@/components/Ui/TitleH1";
 import { Game } from "@/lib/game/game";
-import Link from "next/link";
 
 async function getData(): Promise<Game[]> {
     // Fetching data from a Next.js router handler instead of directy importing
@@ -64,7 +65,7 @@ export default async function Home({ searchParams }: Props) {
 
     return (
         <main className="flex min-h-screen flex-col p-6 gap-6">
-            <h1 className="text-3xl font-bold">Video Games Release Tracker</h1>
+            <TitleH1 title={"Video Games Release Tracker"} />
 
             {/* Search */}
             <Search />
@@ -94,15 +95,7 @@ export default async function Home({ searchParams }: Props) {
                         tags={game.tags}
                     />
                 ))}
-                {noGamesFound && (
-                    <Link
-                        className="bg-slate-900 p-4 rounded-md text-sm flex flex-col gap-2 font-medium"
-                        href={`?${new URLSearchParams({ filter: "Any" })}`}
-                    >
-                        <p>No Games Found under {filterParam} category</p>
-                        <p>Click here to clear filters</p>
-                    </Link>
-                )}
+                {noGamesFound && <NoGameFoundCard filterParam={filterParam} />}
             </div>
         </main>
     );

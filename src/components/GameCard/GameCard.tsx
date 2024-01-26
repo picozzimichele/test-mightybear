@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { GameContext } from "@/context/GameContext";
-import useCountDown from "@/hooks/useCountDown";
 import StarSvg from "@/public/svg/StarSvg";
 import CowntdownTimer from "./CowntdownTimer";
 
@@ -24,16 +23,6 @@ export default function GameCard({
 }) {
     // context is not really needed here, but I'm using it to show how it would be used
     const { games, setGames } = React.useContext(GameContext);
-
-    function secondsRemainingToReleaseDate({
-        releaseDate,
-        todayInSeconds,
-    }: {
-        releaseDate: number;
-        todayInSeconds: number;
-    }) {
-        return releaseDate - todayInSeconds;
-    }
 
     return (
         <div key={id} className="p-4 bg-slate-900 rounded space-y-2">
