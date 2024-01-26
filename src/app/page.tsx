@@ -1,3 +1,4 @@
+import GameCard from "@/components/GameCard";
 import { getAllGames } from "@/lib/actions/games.actions";
 import { Game } from "@/lib/game/game";
 
@@ -46,18 +47,16 @@ export default async function Home() {
             {/* Games */}
             <div className="grid grid-cols-auto gap-4">
                 {games.map((game) => (
-                    <div key={game.id} className="p-4 bg-slate-900 rounded space-y-2">
-                        <div className="flex">
-                            <h2 className="text-lg font-semibold grow">{game.title}</h2>
-                            <div>${game.price}</div>
-                        </div>
-                        <p>{game.releaseDate}</p>
-                        <div className="text-sm text-slate-400">
-                            <p>{game.rating}</p>
-                            <p>{game.description}</p>
-                            <p>{game.tags}</p>
-                        </div>
-                    </div>
+                    <GameCard
+                        key={game.id}
+                        id={game.id}
+                        title={game.title}
+                        price={game.price}
+                        releaseDate={game.releaseDate}
+                        rating={game.rating}
+                        description={game.description}
+                        tags={game.tags}
+                    />
                 ))}
             </div>
         </main>
