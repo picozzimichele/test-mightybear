@@ -1,92 +1,92 @@
 [
-	{
-		"id": 1,
-		"title": "God of Tar",
-		"description": "An epic adventure in the world of road construction.",
-		"price": 59.99,
-		"rating": 4.5,
-		"releaseDate": 1706220208,
-		"tags": ["Adventure", "Strategy", "Simulation"]
-	},
-	{
-		"id": 2,
-		"title": "The Legend of Zorldo: Breath of the Mild",
-		"description": "Explore the peaceful world of Zorldo in this relaxing game.",
-		"price": 49.99,
-		"rating": 4.7,
-		"releaseDate": 1706220208,
-		"tags": ["Adventure", "Puzzle", "Exploration"]
-	},
-	{
-		"id": 3,
-		"title": "MineSweat",
-		"description": "A fitness game where you mine for precious gems and metals.",
-		"price": 39.99,
-		"rating": 4.2,
-		"releaseDate": 1706220208,
-		"tags": ["Fitness", "Simulation", "Strategy"]
-	},
-	{
-		"id": 4,
-		"title": "Super Smash Buns",
-		"description": "A fast-paced cooking game where you prepare and serve a variety of buns.",
-		"price": 29.99,
-		"rating": 4.8,
-		"releaseDate": 1706220208,
-		"tags": ["Cooking", "Simulation", "Strategy"]
-	},
-	{
-		"id": 5,
-		"title": "Resident Weevil",
-		"description": "Survive against all odds in a bug-infested town",
-		"price": 39.99,
-		"rating": 4.3,
-		"releaseDate": 1718841600,
-		"tags": ["Horror", "Survival"]
-	},
-	{
-		"id": 6,
-		"title": "Need for Seed",
-		"description": "Competitive farming at its finest",
-		"price": 29.99,
-		"rating": 3.9,
-		"releaseDate": 1720137600,
-		"tags": ["Simulation", "Strategy"]
-	},
-	{
-		"id": 7,
-		"title": "Assassin's Belief",
-		"description": "Unravel the secrets of the ancient order",
-		"price": 54.99,
-		"rating": 4.6,
-		"releaseDate": 1723420800,
-		"tags": ["Adventure", "Stealth"]
-	},
-	{
-		"id": 8,
-		"title": "Battlefield of Honor",
-		"description": "A historical battle royale",
-		"price": 59.99,
-		"rating": 4.0,
-		"releaseDate": 1725148800,
-		"tags": ["Shooter", "Multiplayer"]
-	},
-	{
-		"id": 9,
-		"title": "CraftMine",
-		"description": "Build, explore, and survive in this blocky world",
-		"price": 19.99,
-		"rating": 4.9,
-		"releaseDate": 1729123200,
-		"tags": ["Survival", "Creative"]
-	},
-	{
-		"id": 10,
-		"title": "Final Illusion",
-		"description": "Embark on an epic quest to save the world",
-		"price": 49.99,
-		"rating": 4.4,
-		"releaseDate": 1732492800,
-		"tags": ["RPG", "Fantasy"]
-	}
+    {
+        "id": 1,
+        "title": "God of Tar",
+        "description": "An epic adventure in the world of road construction.",
+        "price": 59.99,
+        "rating": 4.5,
+        "releaseDate": 1706220208,
+        "tags": ["Adventure", "Strategy", "Simulation"]
+    },
+    {
+        "id": 2,
+        "title": "The Legend of Zorldo: Breath of the Mild",
+        "description": "Explore the peaceful world of Zorldo in this relaxing game.",
+        "price": 49.99,
+        "rating": 4.7,
+        "releaseDate": 1706220208,
+        "tags": ["Adventure", "Puzzle", "Exploration"]
+    },
+    {
+        "id": 3,
+        "title": "MineSweat",
+        "description": "A fitness game where you mine for precious gems and metals.",
+        "price": 39.99,
+        "rating": 4.2,
+        "releaseDate": 1706220208,
+        "tags": ["Fitness", "Simulation", "Strategy"]
+    },
+    {
+        "id": 4,
+        "title": "Super Smash Buns",
+        "description": "A fast-paced cooking game where you prepare and serve a variety of buns.",
+        "price": 29.99,
+        "rating": 4.8,
+        "releaseDate": 1706220208,
+        "tags": ["Cooking", "Simulation", "Strategy"]
+    },
+    {
+        "id": 5,
+        "title": "Resident Weevil",
+        "description": "Survive against all odds in a bug-infested town",
+        "price": 39.99,
+        "rating": 4.3,
+        "releaseDate": 1718841600,
+        "tags": ["Horror", "Survival"]
+    },
+    {
+        "id": 6,
+        "title": "Need for Seed",
+        "description": "Competitive farming at its finest",
+        "price": 29.99,
+        "rating": 3.9,
+        "releaseDate": 1720137600,
+        "tags": ["Simulation", "Strategy"]
+    },
+    {
+        "id": 7,
+        "title": "Assassin's Belief",
+        "description": "Unravel the secrets of the ancient order",
+        "price": 54.99,
+        "rating": 4.6,
+        "releaseDate": 1723420800,
+        "tags": ["Adventure", "Stealth"]
+    },
+    {
+        "id": 8,
+        "title": "Battlefield of Honor",
+        "description": "A historical battle royale",
+        "price": 59.99,
+        "rating": 4.0,
+        "releaseDate": 1725148800,
+        "tags": ["Shooter", "Multiplayer"]
+    },
+    {
+        "id": 9,
+        "title": "CraftMine",
+        "description": "Build, explore, and survive in this blocky world",
+        "price": 19.99,
+        "rating": 4.9,
+        "releaseDate": 1729123200,
+        "tags": ["Survival", "Creative"]
+    },
+    {
+        "id": 10,
+        "title": "Final Illusion",
+        "description": "Embark on an epic quest to save the world",
+        "price": 49.99,
+        "rating": 4.4,
+        "releaseDate": 1732492800,
+        "tags": ["RPG", "Fantasy"]
+    }
 ]
