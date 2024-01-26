@@ -24,6 +24,7 @@ type Props = {
 
 export default async function Home({ searchParams }: Props) {
     const games = await getData();
+    // Can be exported to a separate file
     const filters = [
         "Any",
         "Action",
@@ -38,8 +39,6 @@ export default async function Home({ searchParams }: Props) {
 
     const filterParam = (searchParams.filter as string) || "Any";
     const queryParam = (searchParams.query as string) || "";
-
-    console.log(games);
 
     // Ideally this logic should be handled in the server, but for the sake of simplicity doing it here client side
     const filteredGames = games.filter((game) => {

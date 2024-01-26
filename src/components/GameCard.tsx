@@ -3,6 +3,7 @@ import React from "react";
 import { GameContext } from "@/context/GameContext";
 import useCountDown from "@/hooks/useCountDown";
 import StarSvg from "@/public/svg/StarSvg";
+import CowntdownTimer from "./CowntdownTimer";
 
 export default function GameCard({
     id,
@@ -21,11 +22,8 @@ export default function GameCard({
     description: string;
     tags: string[];
 }) {
+    // context is not really needed here, but I'm using it to show how it would be used
     const { games, setGames } = React.useContext(GameContext);
-    const { secondsLeft, startTimer } = useCountDown();
-    const todayInSeconds = Math.floor(new Date().getTime() / 1000);
-    console.log("todayInSeconds", todayInSeconds);
-    const releaseDateInSeconds = new Date(releaseDate).getTime();
 
     function secondsRemainingToReleaseDate({
         releaseDate,
@@ -43,15 +41,8 @@ export default function GameCard({
                 <h2 className="text-lg font-semibold grow">{title}</h2>
                 <div>${price}</div>
             </div>
-            <p></p>
-            <p>
-                {secondsRemainingToReleaseDate({
-                    releaseDate: releaseDateInSeconds,
-                    todayInSeconds,
-                }) > 0
-                    ? `Release in ${secondsLeft} seconds`
-                    : "Released"}
-            </p>
+            {/* CountDownTimer */}
+            <CowntdownTimer />
             <div className="text-sm text-slate-400">
                 <p>{rating}</p>
                 <p>{description}</p>
