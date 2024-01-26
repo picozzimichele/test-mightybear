@@ -1,3 +1,4 @@
+import FilterCard from "@/components/FilterCard";
 import GameCard from "@/components/GameCard";
 import Search from "@/components/Search";
 import { Game } from "@/lib/game/game";
@@ -40,6 +41,7 @@ export default async function Home({ searchParams }: Props) {
 
     console.log(games);
 
+    // Ideally this logic should be handled in the server, but for the sake of simplicity doing it here client side
     const filteredGames = games.filter((game) => {
         if (searchParams.query) {
             return (
@@ -70,15 +72,12 @@ export default async function Home({ searchParams }: Props) {
             {/* Tags filter, not using state but search params */}
             <div className="flex gap-2 overflow-auto scrollbar-hide">
                 {filters.map((filter) => (
-                    <Link
-                        href={`?${new URLSearchParams({ filter: filter })}`}
+                    <FilterCard
                         key={filter}
-                        className={`${
-                            filterParam === filter ? "text-blue-700" : "text-slate-50"
-                        } p-2 rounded-md text-sm bg-slate-900 `}
-                    >
-                        {filter}
-                    </Link>
+                        filterParam={filterParam}
+                        filter={filter}
+                        href={{ filter: filter }}
+                    />
                 ))}
             </div>
 
