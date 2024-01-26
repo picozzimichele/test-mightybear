@@ -2,6 +2,7 @@
 import React from "react";
 import { GameContext } from "@/context/GameContext";
 import useCountDown from "@/hooks/useCountDown";
+import StarSvg from "@/public/svg/StarSvg";
 
 export default function GameCard({
     id,
@@ -23,6 +24,7 @@ export default function GameCard({
     const { games, setGames } = React.useContext(GameContext);
     const { secondsLeft, startTimer } = useCountDown();
     const todayInSeconds = Math.floor(new Date().getTime() / 1000);
+    console.log("todayInSeconds", todayInSeconds);
     const releaseDateInSeconds = new Date(releaseDate).getTime();
 
     function secondsRemainingToReleaseDate({
@@ -53,6 +55,13 @@ export default function GameCard({
             <div className="text-sm text-slate-400">
                 <p>{rating}</p>
                 <p>{description}</p>
+            </div>
+            <div className="flex w-full gap-2 items-start">
+                {[...Array(Math.round(rating))].map((_, index) => (
+                    <div key={index} className="h-4 w-4 text-blue-700">
+                        <StarSvg />
+                    </div>
+                ))}
             </div>
             <div className="flex flex-wrap gap-2">
                 {tags.map((tag) => (
