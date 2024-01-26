@@ -37,9 +37,12 @@ export default function CowntdownTimer({ releaseDate }: { releaseDate?: number }
     }, [days, hours, minutes, seconds]);
 
     return (
-        <div className="flex w-full text-xs gap-2">
+        <div className="flex w-full text-xs gap-2 text-blue-200">
             {loading ? (
-                <div className="w-full rounded-lg h-10 bg-gray-700 animate-pulse"></div>
+                <div className="flex w-full flex-col gap-2">
+                    <div className="flex w-full rounded-md h-5 bg-gray-700 animate-pulse" />
+                    <div className="flex w-[70%] rounded-md h-5 bg-gray-700 animate-pulse" />
+                </div>
             ) : (
                 <p>
                     {days} days, {hours} hours, {minutes} minutes, {seconds} seconds to release!
